@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+.inputs {
+  height: 10vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs > * {
+  margin: 5px;
+}
+
+#table {
+  display: flex;
+
+  height: 90vh;
+  width: 100vw;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  width: 2rem;
+  height: 2rem;
+
+  border: 2px black solid;
+}
+
+#table .col {
+  display: flex;
+  flex-direction: column;
+}
+
+#table .col:nth-child(2n) {
+  flex-direction: column-reverse;
+}
