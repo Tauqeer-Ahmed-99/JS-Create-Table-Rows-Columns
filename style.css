@@ -29,10 +29,14 @@
 }
 
 .item {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
 
   border: 2px black solid;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #table .col {
