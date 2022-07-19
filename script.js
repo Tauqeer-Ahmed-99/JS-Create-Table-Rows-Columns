@@ -10,25 +10,13 @@ let rows = 0;
 
 let columns = 0;
 
-let elements = [];
-
 const getInputValues = () => {
   rows = +rowsInput.value;
   columns = +columnsInput.value;
 };
 
-const getTotalElements = () => rows * columns;
-
-const createElementsArray = () => {
-  const totalElements = getTotalElements();
-
-  for (let i = 1; i <= totalElements; i++) {
-    elements.push(i);
-  }
-};
-
 const renderElements = () => {
-  let index = 0;
+  let number = 1;
 
   for (let i = 1; i <= columns; i++) {
     const col = document.createElement("div");
@@ -36,10 +24,10 @@ const renderElements = () => {
     for (let j = 1; j <= rows; j++) {
       const item = document.createElement("div");
       item.className = "item";
-      item.innerHTML = `${elements[index]}`;
+      item.innerHTML = `${number}`;
       col.appendChild(item);
 
-      index += 1;
+      number += 1;
     }
     table.appendChild(col);
   }
@@ -47,7 +35,6 @@ const renderElements = () => {
 
 const createBtnHandler = () => {
   getInputValues();
-  createElementsArray();
   renderElements();
 };
 
